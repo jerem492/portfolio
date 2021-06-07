@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
+    background: #F5F3F5;
 }
 ul{
     list-style-type: none;
@@ -10,13 +11,16 @@ ul{
 }
 a{
     text-decoration: none;
-    color: black;
+    color: #302B27;
 }
 h1{
     font-size: 2.3rem;
 }
 h1, h2, h3{
-    color: #536afd;
+    color: #1B264F;
+}
+p{
+    color: #302B27;
 }
 
 /****************** header *******************/
@@ -43,6 +47,9 @@ ul{
     top: 0;
     right: -300px;
 }
+.lindekinEtGithub a{
+    color: #274690;
+}
 
 /******************* section bienvenue *******************/
 #bienvenue{
@@ -54,7 +61,7 @@ ul{
     position: absolute;
     top: 20px;
     left: 20px;
-    background: rgba(255, 255, 255, 0.253);
+    background: #576da862;
     width: 35%;
     height: 435px;
     text-align: center;
@@ -62,8 +69,8 @@ ul{
 .presentationSectionBienvenue h1{
     padding: 0 122px;
     margin-top: 79px;
-    color: white;
     font-size: 3rem;
+    background: none;
 }
 
 /********************* section qui suis-je **********************/
@@ -184,4 +191,126 @@ ul{
     align-items: center;
     text-align: center;
     margin: 35px 0;
+}
+/*********************** section competences ****************************/
+#competences::before{
+    content: "";
+    background: #302B27;
+    width: 60%;
+    height: 1px;
+    position: absolute;
+    top: -50px;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+}
+#competences{
+    display: grid;
+    grid-template-areas: "html vscode github"
+                         "none none none"
+                         "css sublimetext git";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50% 65px 50%;
+    height: auto;
+    padding: 35px;
+    margin-top: 100px;
+    position: relative;
+}
+.blocCompetence1{
+    grid-area: html;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: -1px 2px 2px rgba(87,108,168,0.7);
+}
+.logoCompetence1 img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+.blocCompetence2{
+    grid-area: css;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: -1px 2px 2px rgba(87,108,168,0.7);
+}
+.logoCompetence2 img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+.blocCompetence3{
+    grid-area: vscode;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: -1px 2px 2px rgba(87,108,168,0.7);
+}
+.logoCompetence3 img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+.blocCompetence4{
+    grid-area: sublimetext;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: -1px 2px 2px rgba(87,108,168,0.7);
+}
+.logoCompetence4 img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+.blocCompetence5{
+    grid-area: git;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: -1px 2px 2px rgba(87,108,168,0.7);
+}
+.logoCompetence5 img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+.blocCompetence6{
+    grid-area: github;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: -1px 2px 2px rgba(87,108,168,0.7);
+}
+.logoCompetence6 img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+/************************* section projets *******************/
+#projets{
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.projets--bloc-reservia{
+    display: 
+    flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 60px auto;
+    text-align: justify;
+}
+.projets--bloc-reservia__image{
+    background: url(../images/capture_reservia.jpg) center/cover;
+    width: 35%;
+    height: 140px;
+    box-shadow: -2px 3px 4px 0px rgba(0,0,0,0.7);
+}
+.projets--bloc-reservia p{
+    margin-left: 20px;
 }
