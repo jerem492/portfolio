@@ -27,9 +27,9 @@ p{
 }
 
 /****************** header *******************/
-.photo-profil{
+.header__photo-profil{
     background: url(../images/photo_profil.jpg) top/cover;
-    width: 6%;
+    width: 94px;
     height: 100px;
     margin: 15px auto;
     border-radius: 8px 0 8px 0;
@@ -56,7 +56,7 @@ li a:hover::before{
     width: 90%;
     background: #302b27;
 }
-.lindekinEtGithub{
+.nav__logos-reseaux{
     display: flex;
     justify-content: space-around;
     width: 15%;
@@ -64,7 +64,7 @@ li a:hover::before{
     top: 0;
     right: -300px;
 }
-.lindekinEtGithub a{
+.nav__logos-reseaux a{
     color: #274690;
 }
 
@@ -74,7 +74,7 @@ li a:hover::before{
     background: url(../images/photo_header.jpg) fixed center/cover;
     height: 70vh;
 }
-.presentationSectionBienvenue{
+.bienvenue__bloc{
     position: absolute;
     top: 20px;
     left: 20px;
@@ -83,7 +83,7 @@ li a:hover::before{
     height: 435px;
     text-align: center;
 }
-.presentationSectionBienvenue h1{
+.bienvenue__bloc h1{
     padding: 0 122px;
     margin-top: 79px;
     font-size: 3rem;
@@ -120,7 +120,7 @@ li a:hover::before{
 #experiencesPro h2{
     margin: 25px 0 50px 0;
 }
-.blocPrincipalExperiences{
+.experiencesPro__bloc-principal{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 100px 100px 100px;
@@ -164,19 +164,19 @@ li a:hover::before{
 .description3{
     grid-column: 5/6;
 }
-.bloc1{
+.experiencesPro__bloc-principal_bloc1{
     grid-area: bloc1;
     display: grid;
     grid-template-columns: 5% 2% 31% 2% 60%;
     grid-template-rows: auto;
 }
-.bloc2{
+.experiencesPro__bloc-principal_bloc2{
     grid-area: bloc2;
     display: grid;
     grid-template-columns: 5% 2% 31% 2% 60%;
     grid-template-rows: auto;
 }
-.bloc3{
+.experiencesPro__bloc-principal_bloc3{
     grid-area: bloc3;
     display: grid;
     grid-template-columns: 5% 2% 31% 2% 60%;
@@ -356,4 +356,49 @@ li a:hover::before{
 }
 .projets--bloc-reservia p{
     margin-left: 20px;
+}
+/**************************** responsive design *******************************/
+@media screen and (max-width: 1150px){
+    .bienvenue__bloc{
+        width: 45%;
+    }
+}
+@media screen and (max-width: 995px){
+    .nav__logos-reseaux{
+        width: 30%;
+        top: 30px;
+        right: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #bienvenue{
+        background: none;
+        height: 55vh;
+        margin-bottom: 30px;
+    }
+    .bienvenue__bloc{
+        right: 0;
+        left: 0;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 30px;
+        width: 60%;
+        height: 50vh;
+    }
+    .imgFinQuiJeSuis{
+        height: 30vh;
+    }
+    .experiencesPro__bloc-principal{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 200px 200px 200px;
+    }
+    .experiencesPro__bloc-principal_bloc1{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-columns: 125px 125px;
+    }
+    .experiencesPro__bloc-principal_bloc1
+    .experiencesPro__bloc-principal_bloc1
 }
