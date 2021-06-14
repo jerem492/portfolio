@@ -328,7 +328,6 @@ li a:hover::before{
 
 /************************* section projets *******************/
 #projets{
-    margin-top: 100px;
     text-align: center;
     margin-bottom: 50px;
     position: relative;
@@ -338,12 +337,12 @@ li a:hover::before{
     display: 
     flex;
     align-items: center;
-    justify-content: space-between;
     width: 80%;
     margin: 60px auto;
     text-align: justify;
 }
 .projets--bloc-reservia__image{
+    display: block;
     background: url(../images/capture_reservia.jpg) center/cover;
     width: 35%;
     height: 140px;
@@ -358,47 +357,66 @@ li a:hover::before{
     margin-left: 20px;
 }
 /**************************** responsive design *******************************/
-@media screen and (max-width: 1150px){
-    .bienvenue__bloc{
-        width: 45%;
+@media(min-width: 768px) and (max-width: 1388px){
+    nav{
+        width: 75%;
+        margin-top: 40px;
     }
-}
-@media screen and (max-width: 995px){
     .nav__logos-reseaux{
-        width: 30%;
-        top: 30px;
+        width: 45%;
+        top: -57px;
         right: 0;
         left: 0;
-        margin-left: auto;
         margin-right: auto;
+        margin-left: auto;
+        background: none;
     }
     #bienvenue{
         background: none;
-        height: 55vh;
-        margin-bottom: 30px;
+        height: 29vh;
     }
     .bienvenue__bloc{
-        right: 0;
-        left: 0;
-        margin-right: auto;
+        display: flex;
+        align-items: center;
+        width: 95%;
+        height: 24vh;
         margin-left: auto;
-        margin-top: 30px;
-        width: 60%;
-        height: 50vh;
+        margin-right: auto;
+    }
+    .bienvenue__bloc h1{
+        margin: auto;
+    }
+    #quiJeSuis p{
+        width: 90%;
     }
     .imgFinQuiJeSuis{
-        height: 30vh;
+        display: none;
     }
-    .experiencesPro__bloc-principal{
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 200px 200px 200px;
+    #experiencesPro{
+        margin: 50px auto 20px;
+        position: relative;
+    }
+    #experiencesPro::before{
+        content: "";
+        width: 68%;
+        height: 1px;
+        position: absolute;
+        background: #302B27;
+
     }
     .experiencesPro__bloc-principal_bloc1{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-columns: 125px 125px;
+        grid-template-columns: 10% 2% 40% 2% 40%;
     }
-    .experiencesPro__bloc-principal_bloc1
-    .experiencesPro__bloc-principal_bloc1
+    .experiencesPro__bloc-principal_bloc2{
+        grid-template-columns: 10% 2% 40% 2% 40%;
+    }
+    .experiencesPro__bloc-principal_bloc3{
+        grid-template-columns: 10% 2% 40% 2% 40%;
+    }
+    .projets--bloc-reservia__image{
+        width: 50%;
+    }
+    .projets--bloc-reservia__image:hover{
+        transform: none;
+    }
 }
