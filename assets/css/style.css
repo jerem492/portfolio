@@ -205,6 +205,11 @@ li a:hover::before{
     width: 60px;
     height: 60px;
 }
+.openclassrooms{
+    background: url(../images/openclassrooms.png) center/cover;
+    width: 60px;
+    height: 60px;
+}
 .blocFormation{
     display: flex;
     flex-direction: column;
@@ -357,6 +362,8 @@ li a:hover::before{
     margin-left: 20px;
 }
 /**************************** responsive design *******************************/
+
+/*********************** format desktop *****************/
 @media(min-width: 768px) and (max-width: 1388px){
     nav{
         width: 75%;
@@ -419,4 +426,8 @@ li a:hover::before{
     .projets--bloc-reservia__image:hover{
         transform: none;
     }
+}
+/******************************* format tablette *****************************/
+@media(min-width: 426px) and (max-width: 767px){
+    
 }
