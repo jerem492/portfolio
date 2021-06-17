@@ -123,12 +123,8 @@ li a:hover::before{
     margin: 25px 0 50px 0;
 }
 .experiencesPro__bloc-principal{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100px 100px 100px;
-    grid-template-areas: "bloc1"
-                         "bloc2"
-                         "bloc3";
+    display: flex;
+    flex-direction: column;
 }
 .logoExperience{
     width: 60px;
@@ -167,19 +163,20 @@ li a:hover::before{
     grid-column: 5/6;
 }
 .experiencesPro__bloc-principal_bloc1{
-    grid-area: bloc1;
     display: grid;
     grid-template-columns: 5% 2% 31% 2% 60%;
     grid-template-rows: auto;
+    margin-bottom: 15px;
 }
 .experiencesPro__bloc-principal_bloc2{
-    grid-area: bloc2;
+    margin-top: 15px;
+    margin-bottom: 15px;
     display: grid;
     grid-template-columns: 5% 2% 31% 2% 60%;
     grid-template-rows: auto;
 }
 .experiencesPro__bloc-principal_bloc3{
-    grid-area: bloc3;
+    margin-top: 15px;
     display: grid;
     grid-template-columns: 5% 2% 31% 2% 60%;
     grid-template-rows: auto;
@@ -366,7 +363,7 @@ li a:hover::before{
 /**************************** responsive design *******************************/
 
 /*********************** format desktop *****************/
-@media(min-width: 768px) and (max-width: 1388px){
+@media(max-width: 1388px){
     nav{
         width: 75%;
         margin-top: 40px;
@@ -430,7 +427,7 @@ li a:hover::before{
     }
 }
 /******************************* format tablette *****************************/
-@media(min-width: 426px) and (max-width: 767px){
+@media(max-width: 767px){
     nav{
         width: 95%;
     }
@@ -458,5 +455,67 @@ li a:hover::before{
     }
     #experiencesPro{
         width: 95%;
+    }
+    .experiencesPro__bloc-principal_bloc1{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 50px 30px 50px;
+        grid-template-areas: "logo titre"
+                             "none none"
+                             "description description";
+    }
+    .carrefour{
+        grid-area: logo;
+    }
+    .experience1{
+        grid-area: titre;
+    }
+    .description1{
+        grid-area: description;
+    }
+    .experiencesPro__bloc-principal_bloc2{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 60px 30px 60px;
+        grid-template-areas: "logo titre"
+                             "none none"
+                             "description description";
+    }
+    .armee{
+        grid-area: logo;
+    }
+    .experience2{
+        grid-area: titre;
+    }
+    .description2{
+        grid-area: description;
+    }
+    .experiencesPro__bloc-principal_bloc3{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 60px 30px 60px;
+        grid-template-areas: "logo titre"
+                             "none none"
+                             "description description";
+    }
+    .xpo{
+        grid-area: logo;
+    }
+    .experience3{
+        grid-area: titre;
+    }
+    .description3{
+        grid-area: description;
+    }
+    .projets--bloc-reservia__image{
+        width: 95%;
+        height: 170px;
+        margin: auto;
+    }
+    .projets--bloc-reservia__image:hover{
+        transform: none;
+    }
+    .projets--bloc-reservia p{
+        display: none;
     }
 }
